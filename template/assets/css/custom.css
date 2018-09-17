@@ -1,0 +1,218 @@
+/* AUTHOR - YEX */
+@import url('responsive.css');
+
+:root {
+  --c-dark: #2f3640;
+  --c-dark-light: #353b48;
+  --c-light: #99AAB5;
+  --c-purple: #9c88ff;
+}
+body,html {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-file-label::after {
+  content: "Resim seç" !important;
+}
+
+
+.form-control:focus, .custom-file-input:focus~.custom-file-label, .uploadBtn:focus {
+  border-color: #8829e16e !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(138, 42, 226, 0.21) !important;
+}
+
+.navbar {
+  background: var(--c-dark) !important;
+  color: white;
+  height: 65px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12);
+  z-index: 999999;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 20px;
+  border: 0px !important;
+  outline: none;
+}
+
+.navbar .nav-link{
+  font-family: Montserrat;
+  font-weight: 400;
+  color: white !important;
+  font-size: 15px;
+}
+
+#nav-logo {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: #8E2DE2;  
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.centerBox {
+  width: 80%;
+}
+
+.centerBox .heading {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 57px;
+  color: white;
+  text-align: center;
+}
+
+.centerBox .heading-alt {
+  margin-top: 2px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+}
+
+.centerBox .mainBox {
+  width: 100%;
+}
+
+.uploadBox {
+  background: white;
+  /*height: 185px;*/
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0px 20px rgba(91, 87, 95, 0.21);  
+  transition: all 400ms ease-in-out;
+}
+
+.uploadOverlay {
+  margin-bottom: 0rem !important;
+}
+
+.uploadBtn {
+  background: #8c7ae6;
+  color: white;
+  width: 100px;
+}
+
+.info-section {
+  width: 100%;
+  height: 300px;
+}
+
+footer {
+  color: white;
+  width: 100%;
+  height: 60px;
+  padding: 2rem;
+  background: var(--c-dark);
+  font-family: Montserrat;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > .container {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social-media {
+  list-style-type: none;
+  padding: 0px !important;
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  margin: 0px !important;
+}
+
+footer .social-media li {
+  display: inline-block;
+  height: inherit;
+  padding: 0 6px;
+}
+
+footer .social-media li a {
+  color: white;  
+}
+
+.helpOverlay {
+  padding: 3rem 0;
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat;
+  background: #eeeeee;
+}
+
+.top-banner {
+  width: 100%;
+  height: 200px;
+  background: #8E2DE2;  
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.top-banner .heading {
+  font-family: Montserrat;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
+
+.customBox {
+  background: white;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  margin: 2rem 0 ;
+}
+
+.customBox .heading {
+  font-weight: 600;
+  color: #8c7ae6;
+}
+
+.customBox .text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.customBox table {
+  font-size: 14px;
+}
+
+
+.view {
+  width: 100%;
+  height: 100%;
+}
