@@ -15,7 +15,7 @@
               </div>
               <input type="text" name="image_token" hidden value="<?php
                 $randch = bin2hex(openssl_random_pseudo_bytes(10));
-                setSession(["image_token" => $randch]);
+                $_SESSION["image_token"] = $randch;
                 echo $randch;
               ?>">
               <div class="form-group mt-2 mb-0">

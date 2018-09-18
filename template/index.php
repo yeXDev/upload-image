@@ -15,12 +15,12 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" id="nav-logo" href="#">Image</a>
+        <a class="navbar-brand" id="nav-logo" href="">Image</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav mr-auto"></ul>
           <div class="div-inline my-2 my-lg-0">
@@ -78,6 +78,6 @@
   <script src="<?=THEME_URL?>/assets/js/custom.js"></script>
   <script src="<?=URL?>/library/assets/notify.js"></script>
   <script src="<?=URL?>/library/public.js"></script>
-  
+
 </body>
 </html>

@@ -19,6 +19,11 @@ function alertSuccess(text) {
   );
 }
 
+$("#nav-logo").on("click", function  (e) {
+  e.preventDefault();
+  $(".view").load("template/pages/index.page.php");
+});
+
 $(".uploadForm").on("submit", function(e) {
   var  dataForm = this;
   var form = $(this);
@@ -46,6 +51,11 @@ $(".uploadForm").on("submit", function(e) {
         alertSuccess(data.msg);
         $(".view").load("template/pages/i.page.php?img=" + data.img);
       } else {
+        if (typeof (history.pushState) != "undefined") {
+          history.pushState({
+            id: 'img'
+          }, "Imgs", "./img/" + data.img);
+        }
         $(".formOverlay").show();
         form.attr("style", "");
         form.children(".loading").remove();
