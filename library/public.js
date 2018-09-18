@@ -50,8 +50,8 @@ $(".uploadForm").on("submit", function(e) {
       if(data.status != "danger") {
         alertSuccess(data.msg);
         $(".view").load("template/pages/i.page.php?img=" + data.img);
+        window.history.replaceState(null, null, 'img/' + data.img.split('.').slice(0, -1).join('.'));
       } else {
-        window.history.pushState(null, null, "img/" + data.img);
         $(".formOverlay").show();
         form.attr("style", "");
         form.children(".loading").remove();
