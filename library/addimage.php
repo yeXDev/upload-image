@@ -21,11 +21,11 @@
             $img->Process('../img/');
             if ( $img->processed ) {
               $add = $con->prepare("INSERT INTO images SET
-                image_address = :image_address,
+                image_name = :image_name,
                 image_created_at = :image_created_at
               ");
               $add->execute([
-                "image_address" => URL."/img/".$img->file_dst_name,
+                "image_name" => $img->file_dst_name,
                 "image_created_at" => time()
               ]);
               if($add->rowCount() > 0) {
