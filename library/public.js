@@ -32,7 +32,7 @@ $(".uploadForm").on("submit", function(e) {
     fontSize: "50px"
   };
   $(".formOverlay").hide();
-  $(this).append("<span class='loading'> <i class='fas fa-sync-alt fa-spin'></i></span>").css(loadingStyle); 
+  $(this).append("<span class='loading'> <i class='fas fa-sync-alt fa-spin'></i></span>").css(loadingStyle);
   $.ajax({
     url: URL + "/library/addimage.php",
     type: "POST",
@@ -44,12 +44,23 @@ $(".uploadForm").on("submit", function(e) {
     success: function(data) {
       if(data.status != "danger") {
         alertSuccess(data.msg);
+        var img_link =  URL + "/img/" + data.img;
+        var img =  URL + "/img/" + data.img.split('.').slice(0, -1).join('.');
+        $(".view").load("template/pages/i.page.php?img=" + data.img, function(){
+          $("#previewImage").attr("src", img_link);
+          $("#htmlCode").attr("value", '<a href="'+img+'"><img src="'+img_link+'"></a>')
+          $("#bbCode").attr("value", '[url='+img+'][img]'+img_link+'[/img][/url]')
+          $("#markdown").attr("value", '[![image]('+img_link+')]('+img+')')
+          $("#imgPage").attr("value", img)
+          $("#imgAddress").attr("value", img_link);
+        });
+        $(".view").css("height", "auto");
       } else {
         $(".formOverlay").show();
         form.attr("style", "");
         form.children(".loading").remove();
         alertError(data.msg);
       }
-    }   
+    }
   });
 });

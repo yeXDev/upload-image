@@ -1,8 +1,8 @@
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
   .navbar {
     height: auto !important;
   }
-
+  
   .centerBox {
     width: 100% !important;
   }
@@ -10,7 +10,7 @@
   .centerBox .heading {
     font-size: 45px !important;
   }
- 
+
   .centerBox .heading-alt {
     font-size: 17px !important;
   }

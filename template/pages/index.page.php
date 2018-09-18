@@ -5,7 +5,7 @@
       <span class="heading-alt">Resimlerini buraya yükleyin sınırsız şekilde saklayabilirsin.</span>
       <div class="mainBox mt-4">
         <div class="row d-flex justify-content-center align-items-center mt-4">
-          <form class="col-lg-12 uploadForm uploadBox" action="" method="post" enctype="multipart/form-data" onsubmit="return false;">
+          <form class="col-lg-8 rounded uploadForm uploadBox" action="" method="post" enctype="multipart/form-data" onsubmit="return false;">
           <div class="formOverlay">
               <div class="input-group mb-3 uploadOverlay">
                 <div class="custom-file">
